@@ -1,0 +1,134 @@
+/* custom edit */
+
+::-webkit-scrollbar {
+    width: 3px;
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+/* html */
+
+body {
+    font-family: "Nimbus Sans L";
+}
+
+header {
+    padding: 10px;
+    height: 30px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container {
+    width: 1400px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.contentContainer {
+    display: flex;
+    /* flex-direction: row; */
+    margin: 10px 0;
+}
+
+.mainNav {
+    color: gray;
+    width: 600px;
+    padding: 20px 0;
+}
+
+.mainNav div {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.list {
+    width: 120px;
+    transition: color 0.3s
+}
+.hover {
+    color: black;
+}
+
+.click {
+    color: black;
+}
+
+.listContainer {
+    font-weight: 600;
+    width: 480px;
+    max-height: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+    transition: max-height 0.8s;
+    margin-left: auto;
+}
+
+table {
+    margin: 0px 10px 20px 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    padding-bottom: 10px;
+    line-height: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.firstColumn {
+    width: 100px;
+}
+
+tr:hover {
+    color: black;
+}
+
+tr:hover th img {
+    content: url('../img/expand-big.png');
+}
+
+th img {
+    width: 10px;
+}
+
+
+.textContainer {
+    /* border: 1px dashed black; */
+    font-size: 16px;
+    line-height: 20px;
+    width: 800px;
+    height: calc(100vh - 150px);
+    padding: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+
+.expandImg {
+    
+}
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        width: 1000px
+    }
+    .listContainer {
+        width: 400px;
+    }
+}
